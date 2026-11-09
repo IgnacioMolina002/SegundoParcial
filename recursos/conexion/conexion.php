@@ -1,8 +1,12 @@
 <?php
+//Conexion Servidor
+
 /* $host = "sql300.infinityfree.com";
 $user = "ifo_43073240";
 $pass = "";
 $baseDatos = "ifo_43073240_nuevatabla"; */
+
+//Conexion LOCAL
 
 $host = "localhost";
 $user = "root";
