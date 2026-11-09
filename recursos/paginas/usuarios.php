@@ -8,9 +8,29 @@ if (!isset($_SESSION['usuario_id']) || $_SESSION['usuario_admin'] != 1) {
 
 require_once '../conexion/conexion.php';
 
-$sql = "SELECT id_usuario, nombre, email, fecha_registro, admin, activo FROM usuarios";
-$resultado = mysqli_query($conexion, $sql);
+$resultados_por_pagina = 10;
+
+$pagina_actual = isset($_GET['pagina']) ? (int)$_GET['pagina'] : 1;
+if ($pagina_actual < 1) {
+    $pagina_actual = 1;
+}
+
+$inicio = ($pagina_actual - 1) * $resultados_por_pagina;
+
+$sql_total = "SELECT COUNT(*) as total FROM usuarios";
+$resultado_total = mysqli_query($conexion, $sql_total);
+$fila_total = mysqli_fetch_assoc($resultado_total);
+$total_usuarios = $fila_total['total'];
+
+$total_paginas = ceil($total_usuarios / $resultados_por_pagina);
+
+$sql_usuarios = "SELECT * FROM usuarios LIMIT ?, ?";
+$stmt = mysqli_prepare($conexion, $sql_usuarios);
+mysqli_stmt_bind_param($stmt, "ii", $inicio, $resultados_por_pagina);
+mysqli_stmt_execute($stmt);
+$resultado = mysqli_stmt_get_result($stmt);
 ?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -81,6 +101,17 @@ $resultado = mysqli_query($conexion, $sql);
                     ?>
                 </tbody>
             </table>
+            <div class="paginacion">
+                <?php
+                    for ($i = 1; $i <= $total_paginas; $i++) {
+                        if ($i == $pagina_actual) {
+                            echo "<strong class='pagina-activa'>$i</strong>";
+                        } else {
+                            echo "<a href='usuarios.php?pagina=$i' class='pagina-enlace'>$i</a>";
+                        }
+                    }
+                ?>
+            </div>
         </div>
     </main>
     <footer>
