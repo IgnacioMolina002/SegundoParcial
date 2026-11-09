@@ -1,0 +1,100 @@
+main.cuerpo {
+    background-size: cover;
+    background-position: center;
+    min-height: calc(100vh - 130px);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; 
+    padding-top: 50px;
+    background-color: #555; 
+}
+
+.contenedor-tabla {
+    background-color: rgba(43, 43, 43, 0.95); 
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5); 
+    width: 90%;
+    max-width: 1000px;
+    color: white;
+    overflow-x: auto; 
+}
+
+.contenedor-tabla h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.tabla-datos {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.tabla-datos th, .tabla-datos td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #555;
+}
+
+.tabla-datos th {
+    background-color: #1a1a1a;
+    color: #007BFF;
+    font-weight: bold;
+}
+
+.tabla-datos tr:hover {
+    background-color: #333333; 
+}
+
+.etiqueta-activo {
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: #28a745;
+    color: white;
+}
+
+.etiqueta-inactivo {
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: #dc3545;
+    color: white;
+}
+
+.btn-accion {
+    padding: 6px 12px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    transition: background 0.3s;
+    display: inline-block;
+}
+
+.btn-activar {
+    background-color: #00fd22; 
+    color: #020202;
+    border: 1px solid #020202;
+}
+
+.btn-activar:hover {
+    background-color: #229613;
+}
+
+.btn-inactivar {
+    background-color: #fc0000; 
+    color: #020202; 
+    border: 1px solid #020202;
+}
+
+.btn-inactivar:hover {
+    background-color: #e0a800;
+}

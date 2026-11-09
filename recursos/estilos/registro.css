@@ -1,0 +1,60 @@
+.tarjeta-registro {
+    background-color: rgba(43, 43, 43, 0.95); 
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5); 
+    width: 100%;
+    max-width: 400px;
+    color: white;
+}
+
+.tarjeta-registro h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.grupo-input {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.grupo-input label {
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #cccccc;
+}
+
+.grupo-input input {
+    padding: 10px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    background-color: #1a1a1a;
+    color: white;
+    font-size: 14px;
+}
+
+.grupo-input input:focus {
+    outline: none;
+    border-color: #007BFF; 
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 12px;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-top: 10px;
+}
+
+.btn-submit:hover {
+    background-color: #0056b3;
+}
+

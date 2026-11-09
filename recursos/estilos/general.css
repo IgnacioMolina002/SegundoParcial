@@ -1,0 +1,89 @@
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+    font-family: Arial, sans-serif; 
+}
+
+header {
+    background-color: #2b2b2b;
+    padding: 15px 30px;
+}
+
+footer {
+    background-color: #1a1a1a;
+    color: #cccccc;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+}
+
+main.cuerpo {
+    background-image: url('../imagenes/home.jpg'); 
+    background-size: cover;
+    background-position: center;
+    min-height: calc(100vh - 130px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #555; 
+}
+
+nav.menu-principal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.enlaces a {
+    color: #ffffff;
+    text-decoration: none;
+    margin-left: 20px;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.enlaces a.btn-ingresar { 
+    border: 1px solid #ffffff; 
+}
+
+.enlaces a.btn-registro { 
+    background-color: #007BFF; 
+    border: 1px solid #007BFF; 
+}
+
+.enlaces a:hover { 
+    opacity: 0.8; 
+}
+
+.mensaje-alerta {
+    text-align: center;
+    color: yellow;
+    margin-bottom: 15px;
+    font-weight: bold; 
+}
+
+.boton-salir {
+    background-color: #dc3545; 
+    border: 1px solid #dc3545;
+    color: #ffffff;
+    text-decoration: none;
+    margin-left: 20px;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.boton-salir:hover {
+    background-color: #c82333; 
+}
+
