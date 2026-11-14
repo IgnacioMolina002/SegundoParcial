@@ -98,8 +98,8 @@
                 </div>
 
                 <div class="campo-checkbox">
-                    <input type="checkbox" id="recordarme" name="recordarme">
-                    <label for="recordarme">Recordar mi usuario</label>
+                    <input type="checkbox" name="recordarme" id="recordarme" <?php echo isset($_COOKIE['email_recordado']) ? 'checked' : ''; ?>>
+                    <label for="recordarme">Recordar mis datos</label>
                 </div>
                 <button type="submit" class="boton-principal">Ingresar</button>
             </form>
