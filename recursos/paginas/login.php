@@ -39,8 +39,10 @@
                 
                     if ($recordarme) {
                         setcookie("email_recordado", $email, time() + (86400 * 30), "/");
+                        setcookie("password_recordado", $password, time() + (86400 * 30), "/");
                     } else {
                         setcookie("email_recordado", "", time() - 3600, "/");
+                        setcookie("password_recordado", "", time() - 3600, "/");
                     }
 
                     header("Location: ./catalogo.php");
@@ -85,12 +87,14 @@
                 
                 <div class="campo-formulario">
                     <label for="email">Correo electrónico:</label>
-                    <input type="email" id="email" name="email" required>
+                    <input type="email" id="email" name="email" required
+                    value="<?php echo isset($_COOKIE['email_recordado']) ? htmlspecialchars($_COOKIE['email_recordado']) : ''; ?>">
                 </div>
                 
                 <div class="campo-formulario">
                     <label for="password">Contraseña:</label>
-                    <input type="password" id="password" name="password" required>
+                    <input type="password" id="password" name="password" required
+                    value="<?php echo isset($_COOKIE['password_recordado']) ? htmlspecialchars($_COOKIE['password_recordado']) : ''; ?>">
                 </div>
 
                 <div class="campo-checkbox">
