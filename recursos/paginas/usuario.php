@@ -89,7 +89,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['accion']) && $_POST['a
                 
                 <div class="acciones-perfil">
                     <button type="submit" name="accion" value="modificar" class="boton-principal">Modificar Datos</button>
-                    <a href="cambiarContraseña.php" class="boton-secundario">Cambiar Contraseña</a>
+                    <a href="cambiarPassword.php" class="boton-secundario">Cambiar Contraseña</a>
                 </div>
             </form>
         </div>

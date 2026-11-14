@@ -73,7 +73,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 echo '<p class="mensaje-alerta">' . $mensaje . '</p>';
             }
             ?>
-            <form action="cambiarContraseña.php" method="POST">
+            <form action="cambiarPassword.php" method="POST">
                 
                 <div class="campo-formulario">
                     <label for="password_actual">Contraseña actual:</label>
