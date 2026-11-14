@@ -80,7 +80,7 @@
             <h2>Iniciar Sesión</h2>
             <?php
                 if ($mensaje != "") {
-                    echo '<p class="mensaje-alerta">' . $mensaje . '</p>';
+                    echo '<p class="mensaje-alerta">' .  htmlspecialchars($mensaje) . '</p>';
                 }
             ?>
             <form action="login.php" method="POST">

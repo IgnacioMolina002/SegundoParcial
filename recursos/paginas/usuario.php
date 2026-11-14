@@ -67,7 +67,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['accion']) && $_POST['a
             <h2>Mi Usuario</h2>
             <?php 
                 if ($mensaje != "") {
-                    echo '<p class="mensaje-alerta">' . $mensaje . '</p>';
+                    echo '<p class="mensaje-alerta">' . htmlspecialchars($mensaje) . '</p>';
                 }
             ?>
             <form action="usuario.php" method="POST">

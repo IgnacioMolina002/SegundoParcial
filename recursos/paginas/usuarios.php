@@ -86,7 +86,7 @@ $resultado = mysqli_stmt_get_result($stmt);
                         echo '</td>';
                         echo '<td>';
                         echo '<form action="cambiarEstado.php" method="POST" style="margin: 0;">';
-                        echo '<input type="hidden" name="id" value="' . $fila['id_usuario'] . '">';
+                        echo '<input type="hidden" name="id" value="' . htmlspecialchars($fila['id_usuario']) . '">';
                         if ($fila['activo'] == 1) {
                             echo '<input type="hidden" name="estado" value="0">';
                             echo '<button type="submit" class="btn-accion btn-inactivar" style="cursor: pointer;">Inactivar</button>';

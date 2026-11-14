@@ -70,7 +70,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             
             <?php 
             if ($mensaje != "") {
-                echo '<p class="mensaje-alerta">' . $mensaje . '</p>';
+                echo '<p class="mensaje-alerta">' . . htmlspecialchars($mensaje) . '</p>';
             }
             ?>
             <form action="cambiarPassword.php" method="POST">
